@@ -48,6 +48,7 @@ main {
 .menu {
     padding-top: 27px;
     padding-left: 19px;
+    /* padding-right: 19px; */
 }
 .menu-1 {
     padding-top: 123px;
@@ -106,6 +107,9 @@ main {
     font-weight: 400;
     padding-bottom: 16px;
     line-height: 19px;
+}
+.menu-opcao-ultimo {
+    margin-right: 19px;
 }
 /* BARRA FIXA DE BAIXO */
 footer {
