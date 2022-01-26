@@ -1,3 +1,9 @@
+/* BODY */
+/* 
+body {
+    height: 100px;
+}
+ */
 /* FONTS FAMILY GERAL */
 h1 {
     font-family: 'Righteous', cursive;
@@ -36,6 +42,9 @@ main {
     background-color: #EEEEEE;
     /* border: 1px solid black; */
 }
+.conteudo {
+    position: relative;
+}
 .menu {
     padding-top: 27px;
     padding-left: 19px;
@@ -44,7 +53,7 @@ main {
     padding-top: 123px;
 }
 .menu-3 {
-    padding-bottom: 108px;
+    padding-bottom: 16px;
 }
 .menu h1 {
     font-size: 26px;
@@ -100,7 +109,7 @@ main {
 footer {
     width: 414px;
     height: 92px;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     background-color: #FFFFFF;
     /* border: 1px solid black; */
