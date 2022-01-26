@@ -62,7 +62,9 @@ main {
 }
 .menu-opcoes {
     display: flex;
-    overflow: hidden;
+    overflow-x: scroll;
+    padding-bottom: 17px; /* DETALHE BESTA DA BARRINHA DE ROLAGEM */
+    /* overflow: hidden; */
 }
 .menu-opcao {
     box-sizing: border-box;
