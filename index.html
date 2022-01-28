@@ -29,29 +29,29 @@
                 <h1>Primeiro, seu prato</h1>
                 <div class="menu-opcoes">
                     <!-- <div class="menu-opcao-checado"></div> -->
-                    <div class="menu-opcao" id="pizza" onclick="selecionar()" data-identifier="food-option">
+                    <div class="menu-opcao-pizza menu-opcao-pizza-escondido menu-opcao pizza" onclick="selecionarPizza()" data-identifier="food-option">
                         <img src="assets/pizza.jpg" alt="pizza">
                         <h2 class="menu-opcao-prato" data-identifier="food-title">Pizza de Capituri</h2>
                         <h2 class="menu-opcao-descricao">Massa de pizza, frango e capituri</h2>
                         <h2 class="menu-opcao-preco" data-identifier="food-price">R$ 20,00</h2>
-                        <ion-icon name="checkmark-circle" id="pizza-sinal-verde"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="pizza-sinal-verde pizza-sinal-verde-escondido"></ion-icon>
                         <!-- <img class="sinal-checado-verde" src="assets/sinal-checado-verde.png" alt="sinal-checado-verde"> -->
                     </div>
 
-                    <div class="menu-opcao" data-identifier="food-option">
+                    <div class="menu-opcao-lasanha menu-opcao-lasanha-escondido menu-opcao" data-identifier="food-option">
                         <img src="assets/lasanha.jpg" alt="lasanha">
-                        <h2 class="menu-opcao-prato" data-identifier="food-title">Lasanha de Frango</h2>
+                        <h2 class="menu-opcao-prato" onclick="selecionarLasanha()" data-identifier="food-title">Lasanha de Frango</h2>
                         <h2 class="menu-opcao-descricao">Macarrão, frango e molho</h2>
                         <h2 class="menu-opcao-preco" data-identifier="food-price">R$ 15,00</h2>
-                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="lasanha-sinal-verde lasanha-sinal-verde-escondido"></ion-icon>
                     </div>
 
-                    <div class="menu-opcao menu-opcao-ultimo" data-identifier="food-option">
+                    <div class="menu-opcao-sushi menu-opcao-sushi-escondido menu-opcao menu-opcao-ultimo" data-identifier="food-option">
                         <img src="assets/sushi.jpg" alt="sushi">
-                        <h2 class="menu-opcao-prato" data-identifier="food-title">Barca de Sushi</h2>
+                        <h2 class="menu-opcao-prato" onclick="selecionarSushi()" data-identifier="food-title">Barca de Sushi</h2>
                         <h2 class="menu-opcao-descricao">20 peças de sushi de kani</h2>
                         <h2 class="menu-opcao-preco" data-identifier="food-price">R$ 25,00</h2>
-                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="sushi-sinal-verde sushi-sinal-verde-escondido"></ion-icon>
                     </div>
                 </div>
             </div>
@@ -59,28 +59,28 @@
             <div class="menu" data-identifier="drinks">
                 <h1>Agora, sua bebida</h1>
                 <div class="menu-opcoes">
-                    <div class="menu-opcao">
+                    <div class="menu-opcao-refrigerante menu-opcao-refrigerante-escondido menu-opcao" onclick="selecionarRefrigerante()">
                         <img src="assets/refrigerante.jpg" alt="refrigerante">
                         <h2 class="menu-opcao-prato">Lata de refrigerante</h2>
                         <h2 class="menu-opcao-descricao">Lata de 350ml, qualquer marca</h2>
                         <h2 class="menu-opcao-preco">R$ 6,00</h2>
-                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="refrigerante-sinal-verde refrigerante-sinal-verde-escondido"></ion-icon>
                     </div>
 
-                    <div class="menu-opcao">
+                    <div class="menu-opcao-suco menu-opcao-suco-escondido menu-opcao" onclick="selecionarSuco()">
                         <img src="assets/suco.jpg" alt="suco">
                         <h2 class="menu-opcao-prato">Suquinho de laranja</h2>
                         <h2 class="menu-opcao-descricao">Um DELICIOSO suco de laranja</h2>
                         <h2 class="menu-opcao-preco">R$ 7,00</h2>
-                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="suco-sinal-verde suco-sinal-verde-escondido"></ion-icon>
                     </div>
 
-                    <div class="menu-opcao menu-opcao-ultimo">
+                    <div class="menu-opcao-coco menu-opcao-coco-escondido menu-opcao menu-opcao-ultimo" onclick="selecionarCoco()">
                         <img src="assets/coco.jpg" alt="coco">
                         <h2 class="menu-opcao-prato">Água de Coco</h2>
                         <h2 class="menu-opcao-descricao">Água de coco fresquinha</h2>
                         <h2 class="menu-opcao-preco">R$ 8,00</h2>
-                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="coco-sinal-verde coco-sinal-verde-escondido"></ion-icon>
                     </div>
                 </div>
             </div>
@@ -88,46 +88,49 @@
             <div class="menu menu-3" data-identifier="desserts">
                 <h1>Por fim, sua sobremesa</h1>
                 <div class="menu-opcoes">
-                    <div class="menu-opcao">
+                    <div class="menu-opcao-bolo menu-opcao-bolo-escondido menu-opcao" onclick="selecionarBolo()">
                         <img src="assets/bolo.jpg" alt="bolo">
                         <h2 class="menu-opcao-prato">Bolo de Cenoura</h2>
                         <h2 class="menu-opcao-descricao">Bolo de cenoura com cobertura de chocolate</h2>
                         <h2 class="menu-opcao-preco">R$ 11,00</h2>
-                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="bolo-sinal-verde bolo-sinal-verde-escondido"></ion-icon>
                     </div>
 
-                    <div class="menu-opcao">
+                    <div class="menu-opcao-sorvete menu-opcao-sorvete-escondido menu-opcao" onclick="selecionarSorvete()">
                         <img src="assets/sorvete.jpg" alt="sorvete">
                         <h2 class="menu-opcao-prato">Sorvete</h2>
                         <h2 class="menu-opcao-descricao">500mg de sorvete, qualquer sabor</h2>
                         <h2 class="menu-opcao-preco">R$ 12,00</h2>
-                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="sorvete-sinal-verde sorvete-sinal-verde-escondido"></ion-icon>
                     </div>
 
-                    <div class="menu-opcao menu-opcao-ultimo">
+                    <div class="menu-opcao-pudim menu-opcao-pudim-escondido menu-opcao menu-opcao-ultimo" onclick="selecionarPudim()">
                         <img src="assets/pudim.jpg" alt="pudim">
                         <h2 class="menu-opcao-prato">Pudim</h2>
                         <h2 class="menu-opcao-descricao">Pudim de leite com calda de chocolate</h2>
                         <h2 class="menu-opcao-preco">R$ 13,00</h2>
-                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="pudim-sinal-verde pudim-sinal-verde-escondido"></ion-icon>
                     </div>
                 </div>
             </div>
             <!-- BARRA FIXA DE BAIXO -->
-            <footer class="barra-fixa-baixo-cinza">
+            <footer class="barra-fixa-baixo">
                 <div class="barra-baixo-botao">
                     <h2>Selecione os 3 itens para fechar o pedido</h2>
                 </div>
             </footer>
 
+            <!-- 
             <footer class="barra-fixa-baixo-verde">
                 <a href="https://wa.me/5593991970827?text=Eu%20tenho%20interesse%20no%20seu%20carro%20à%20venda"
                     target="_blank">
-                    <div class="barra-baixo-botao">
-                        <h2>Fechar pedido</h2>
-                    </div>
+                <div class="barra-baixo-botao">
+                    <h2>Fechar pedido</h2>
+                </div>
                 </a>
             </footer>
+            -->
+
         </div>
     </main>
     <!-- JAVA -->

@@ -1,5 +1,101 @@
-function selecionar() {
-    // document.getElementsByClassName("menu-opcao").style.boxShadow = "0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
-    document.getElementById("pizza").style.boxShadow = "0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
-    document.getElementById("pizza-sinal-verde").style.display = "flex";
+// VARIÁVEIS PARA MANIPULAÇÃO
+let escolherPizzaSinal = document.querySelector(".pizza-sinal-verde");
+let escolherPizzaBorda = document.querySelector(".menu-opcao-pizza");
+let escolherLasanhaSinal = document.querySelector(".lasanha-sinal-verde");
+let escolherLasanhaBorda = document.querySelector(".menu-opcao-lasanha");
+let escolherSushiSinal = document.querySelector(".sushi-sinal-verde");
+let escolherSushiBorda = document.querySelector(".menu-opcao-sushi");
+let escolherRefrigeranteSinal = document.querySelector(".refrigerante-sinal-verde");
+let escolherRefrigeranteBorda = document.querySelector(".menu-opcao-refrigerante");
+let escolherSucoSinal = document.querySelector(".suco-sinal-verde");
+let escolherSucoBorda = document.querySelector(".menu-opcao-suco");
+let escolherCocoSinal = document.querySelector(".coco-sinal-verde");
+let escolherCocoBorda = document.querySelector(".menu-opcao-coco");
+let escolherBoloSinal = document.querySelector(".bolo-sinal-verde");
+let escolherBoloBorda = document.querySelector(".menu-opcao-bolo");
+let escolherSorveteSinal = document.querySelector(".sorvete-sinal-verde");
+let escolherSorveteBorda = document.querySelector(".menu-opcao-sorvete");
+let escolherPudimSinal = document.querySelector(".pudim-sinal-verde");
+let escolherPudimBorda = document.querySelector(".menu-opcao-pudim");
+// FUNÇÕES DE SELEÇÃO DE ITENS
+// SELEÇÃO DE PRATO
+function selecionarPizza() {
+    escolherPizzaSinal.classList.remove("pizza-sinal-verde-escondido");
+    escolherPizzaBorda.classList.remove("menu-opcao-pizza-escondido");
+    escolherLasanhaSinal.classList.add("lasanha-sinal-verde-escondido");
+    escolherLasanhaBorda.classList.add("menu-opcao-lasanha-escondido");
+    escolherSushiSinal.classList.add("sushi-sinal-verde-escondido");
+    escolherSushiBorda.classList.add("menu-opcao-sushi-escondido");
 }
+function selecionarLasanha() {
+    escolherPizzaSinal.classList.add("pizza-sinal-verde-escondido");
+    escolherPizzaBorda.classList.add("menu-opcao-pizza-escondido");
+    escolherLasanhaSinal.classList.remove("lasanha-sinal-verde-escondido");
+    escolherLasanhaBorda.classList.remove("menu-opcao-lasanha-escondido");
+    escolherSushiSinal.classList.add("sushi-sinal-verde-escondido");
+    escolherSushiBorda.classList.add("menu-opcao-sushi-escondido");
+}
+function selecionarSushi() {
+    escolherPizzaSinal.classList.add("pizza-sinal-verde-escondido");
+    escolherPizzaBorda.classList.add("menu-opcao-pizza-escondido");
+    escolherLasanhaSinal.classList.add("lasanha-sinal-verde-escondido");
+    escolherLasanhaBorda.classList.add("menu-opcao-lasanha-escondido");
+    escolherSushiSinal.classList.remove("sushi-sinal-verde-escondido");
+    escolherSushiBorda.classList.remove("menu-opcao-sushi-escondido");
+}
+// SELEÇÃO DE BEBIDA
+function selecionarRefrigerante() {
+    escolherRefrigeranteSinal.classList.remove("refrigerante-sinal-verde-escondido");
+    escolherRefrigeranteBorda.classList.remove("menu-opcao-refrigerante-escondido");
+    escolherSucoSinal.classList.add("suco-sinal-verde-escondido");
+    escolherSucoBorda.classList.add("menu-opcao-suco-escondido");
+    escolherCocoSinal.classList.add("coco-sinal-verde-escondido");
+    escolherCocoBorda.classList.add("menu-opcao-coco-escondido");
+}
+function selecionarSuco() {
+    escolherRefrigeranteSinal.classList.add("refrigerante-sinal-verde-escondido");
+    escolherRefrigeranteBorda.classList.add("menu-opcao-refrigerante-escondido");
+    escolherSucoSinal.classList.remove("suco-sinal-verde-escondido");
+    escolherSucoBorda.classList.remove("menu-opcao-suco-escondido");
+    escolherCocoSinal.classList.add("coco-sinal-verde-escondido");
+    escolherCocoBorda.classList.add("menu-opcao-coco-escondido");
+}
+function selecionarCoco() {
+    escolherRefrigeranteSinal.classList.add("refrigerante-sinal-verde-escondido");
+    escolherRefrigeranteBorda.classList.add("menu-opcao-refrigerante-escondido");
+    escolherSucoSinal.classList.add("suco-sinal-verde-escondido");
+    escolherSucoBorda.classList.add("menu-opcao-suco-escondido");
+    escolherCocoSinal.classList.remove("coco-sinal-verde-escondido");
+    escolherCocoBorda.classList.remove("menu-opcao-coco-escondido");
+}
+// SELEÇÃO DE SOBREMESA
+function selecionarBolo() {
+    escolherBoloSinal.classList.remove("bolo-sinal-verde-escondido");
+    escolherBoloBorda.classList.remove("menu-opcao-bolo-escondido");
+    escolherSorveteSinal.classList.add("sorvete-sinal-verde-escondido");
+    escolherSorveteBorda.classList.add("menu-opcao-sorvete-escondido");
+    escolherPudimSinal.classList.add("pudim-sinal-verde-escondido");
+    escolherPudimBorda.classList.add("menu-opcao-pudim-escondido");
+}
+function selecionarSorvete() {
+    escolherBoloSinal.classList.add("bolo-sinal-verde-escondido");
+    escolherBoloBorda.classList.add("menu-opcao-bolo-escondido");
+    escolherSorveteSinal.classList.remove("sorvete-sinal-verde-escondido");
+    escolherSorveteBorda.classList.remove("menu-opcao-sorvete-escondido");
+    escolherPudimSinal.classList.add("pudim-sinal-verde-escondido");
+    escolherPudimBorda.classList.add("menu-opcao-pudim-escondido");
+}
+function selecionarPudim() {
+    escolherBoloSinal.classList.add("bolo-sinal-verde-escondido");
+    escolherBoloBorda.classList.add("menu-opcao-bolo-escondido");
+    escolherSorveteSinal.classList.add("sorvete-sinal-verde-escondido");
+    escolherSorveteBorda.classList.add("menu-opcao-sorvete-escondido");
+    escolherPudimSinal.classList.remove("pudim-sinal-verde-escondido");
+    escolherPudimBorda.classList.remove("menu-opcao-pudim-escondido");
+}
+    // let escolherComida = document.getElementsByClassName("pizza");
+    // document.getElementsByClassName("pizza").style.boxShadow = "0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
+    // let escolherComida = document.getElementsByClassName(".pizza-sinal-verde");
+    // escolherComida.cla
+    // document.getElementsByClassName("pizza-sinal-verde").style.display = "flex";
+    // escolherComida.style.boxShadow = "0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
