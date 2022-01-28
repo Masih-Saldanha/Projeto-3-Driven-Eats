@@ -231,7 +231,7 @@ footer {
 .barra-baixo-botao {
     width: 364px;
     height: 61px;
-    background-color: #CBCBCB;
+    background-color: #32B72F;
     border-radius: 50px;
     display: inline-flex;
     text-align: center;
@@ -239,26 +239,29 @@ footer {
 .barra-baixo-botao h2 {
     font-size: 20px;
     color: #FFFFFF;
-    font-weight: 400;
+    font-weight: 700;
     margin: auto;
     /* border: 1px solid black; */
     width: 200px;
 }
+
 /* 
 .barra-fixa-baixo-cinza {
-    display: none;        DESATIVA BARRA FIXA DE BAIXO CINZA
+    DESATIVA BARRA FIXA DE BAIXO CINZA
+    display: none;
 }
 .barra-fixa-baixo-verde {
-    display: none;        DESATIVA BARRA FIXA DE BAIXO VERDE
-}
-.barra-fixa-baixo-verde div {
-    background-color: #32B72F;
-}
-.barra-fixa-baixo-verde h2 {
-    font-weight: 700;
-    border: 1px solid black;
+    DESATIVA BARRA FIXA DE BAIXO VERDE
+    display: none;
 }
 */
+
+.barra-baixo-botao-verde {
+    background-color: #CBCBCB;
+}
+.barra-baixo-botao-verde h2 {
+    font-weight: 400;
+}
 
 /* REFERÊNCIAS FONT-FAMILY CSS */
 

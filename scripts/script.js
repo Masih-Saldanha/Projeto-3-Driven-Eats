@@ -17,6 +17,24 @@ let escolherSorveteSinal = document.querySelector(".sorvete-sinal-verde");
 let escolherSorveteBorda = document.querySelector(".menu-opcao-sorvete");
 let escolherPudimSinal = document.querySelector(".pudim-sinal-verde");
 let escolherPudimBorda = document.querySelector(".menu-opcao-pudim");
+
+let botaoVerde = document.querySelector(".barra-baixo-botao");
+
+let pedidoFeitoPrato = 0;
+let pedidoFeitoBebida = 0;
+let pedidoFeitoSobremesa = 0;
+
+let pedidoFeito = pedidoFeitoPrato+pedidoFeitoBebida+pedidoFeitoSobremesa;
+
+// FUNÇÃO QUE VERIFICA E LIBERA O BOTÃO VERDE DE BAIXO
+function fecharPedido() {
+    pedidoFeito = pedidoFeitoPrato+pedidoFeitoBebida+pedidoFeitoSobremesa;
+    if (pedidoFeito === 3) {
+        botaoVerde.classList.remove("barra-baixo-botao-verde");
+        botaoVerde.innerHTML = "<h2>Fechar pedido</h2>"
+    }
+}
+
 // FUNÇÕES DE SELEÇÃO DE ITENS
 // SELEÇÃO DE PRATO
 function selecionarPizza() {
@@ -26,6 +44,8 @@ function selecionarPizza() {
     escolherLasanhaBorda.classList.add("menu-opcao-lasanha-escondido");
     escolherSushiSinal.classList.add("sushi-sinal-verde-escondido");
     escolherSushiBorda.classList.add("menu-opcao-sushi-escondido");
+    pedidoFeitoPrato = 1;
+    fecharPedido();
 }
 function selecionarLasanha() {
     escolherPizzaSinal.classList.add("pizza-sinal-verde-escondido");
@@ -34,6 +54,8 @@ function selecionarLasanha() {
     escolherLasanhaBorda.classList.remove("menu-opcao-lasanha-escondido");
     escolherSushiSinal.classList.add("sushi-sinal-verde-escondido");
     escolherSushiBorda.classList.add("menu-opcao-sushi-escondido");
+    pedidoFeitoPrato = 1;
+    fecharPedido();
 }
 function selecionarSushi() {
     escolherPizzaSinal.classList.add("pizza-sinal-verde-escondido");
@@ -42,7 +64,10 @@ function selecionarSushi() {
     escolherLasanhaBorda.classList.add("menu-opcao-lasanha-escondido");
     escolherSushiSinal.classList.remove("sushi-sinal-verde-escondido");
     escolherSushiBorda.classList.remove("menu-opcao-sushi-escondido");
+    pedidoFeitoPrato = 1;
+    fecharPedido();
 }
+
 // SELEÇÃO DE BEBIDA
 function selecionarRefrigerante() {
     escolherRefrigeranteSinal.classList.remove("refrigerante-sinal-verde-escondido");
@@ -51,6 +76,8 @@ function selecionarRefrigerante() {
     escolherSucoBorda.classList.add("menu-opcao-suco-escondido");
     escolherCocoSinal.classList.add("coco-sinal-verde-escondido");
     escolherCocoBorda.classList.add("menu-opcao-coco-escondido");
+    pedidoFeitoBebida = 1;
+    fecharPedido();
 }
 function selecionarSuco() {
     escolherRefrigeranteSinal.classList.add("refrigerante-sinal-verde-escondido");
@@ -59,6 +86,8 @@ function selecionarSuco() {
     escolherSucoBorda.classList.remove("menu-opcao-suco-escondido");
     escolherCocoSinal.classList.add("coco-sinal-verde-escondido");
     escolherCocoBorda.classList.add("menu-opcao-coco-escondido");
+    pedidoFeitoBebida = 1;
+    fecharPedido();
 }
 function selecionarCoco() {
     escolherRefrigeranteSinal.classList.add("refrigerante-sinal-verde-escondido");
@@ -67,7 +96,10 @@ function selecionarCoco() {
     escolherSucoBorda.classList.add("menu-opcao-suco-escondido");
     escolherCocoSinal.classList.remove("coco-sinal-verde-escondido");
     escolherCocoBorda.classList.remove("menu-opcao-coco-escondido");
+    pedidoFeitoBebida = 1;
+    fecharPedido();
 }
+
 // SELEÇÃO DE SOBREMESA
 function selecionarBolo() {
     escolherBoloSinal.classList.remove("bolo-sinal-verde-escondido");
@@ -76,6 +108,8 @@ function selecionarBolo() {
     escolherSorveteBorda.classList.add("menu-opcao-sorvete-escondido");
     escolherPudimSinal.classList.add("pudim-sinal-verde-escondido");
     escolherPudimBorda.classList.add("menu-opcao-pudim-escondido");
+    pedidoFeitoSobremesa = 1;
+    fecharPedido();
 }
 function selecionarSorvete() {
     escolherBoloSinal.classList.add("bolo-sinal-verde-escondido");
@@ -84,6 +118,8 @@ function selecionarSorvete() {
     escolherSorveteBorda.classList.remove("menu-opcao-sorvete-escondido");
     escolherPudimSinal.classList.add("pudim-sinal-verde-escondido");
     escolherPudimBorda.classList.add("menu-opcao-pudim-escondido");
+    pedidoFeitoSobremesa = 1;
+    fecharPedido();
 }
 function selecionarPudim() {
     escolherBoloSinal.classList.add("bolo-sinal-verde-escondido");
@@ -92,10 +128,9 @@ function selecionarPudim() {
     escolherSorveteBorda.classList.add("menu-opcao-sorvete-escondido");
     escolherPudimSinal.classList.remove("pudim-sinal-verde-escondido");
     escolherPudimBorda.classList.remove("menu-opcao-pudim-escondido");
+    pedidoFeitoSobremesa = 1;
+    fecharPedido();
 }
-    // let escolherComida = document.getElementsByClassName("pizza");
-    // document.getElementsByClassName("pizza").style.boxShadow = "0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
-    // let escolherComida = document.getElementsByClassName(".pizza-sinal-verde");
-    // escolherComida.cla
-    // document.getElementsByClassName("pizza-sinal-verde").style.display = "flex";
-    // escolherComida.style.boxShadow = "0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
+
+// APERTAR BOTÃO VERDE
+
