@@ -25,21 +25,22 @@ let precoPrato = 0;
 let precoBebida = 0;
 let precoSobremesa = 0;
 let precoTotal = precoPrato+precoBebida+precoSobremesa;
-
-let botaoVerde = document.querySelector(".barra-baixo-botao");
 // VARIÁVEIS DE CHECAGEM PARA HABILITAÇÃO DO BOTÃO VERDE
 let pedidoFeitoPrato = 0;
 let pedidoFeitoBebida = 0;
 let pedidoFeitoSobremesa = 0;
-
 let pedidoFeito = pedidoFeitoPrato+pedidoFeitoBebida+pedidoFeitoSobremesa;
 // VARIÁVEIS DE NOMES DOS PEDIDOS
 let nomePrato = "";
 let nomeBebida = "";
 let nomeSobremesa = "";
-
 let mensagemZap = "";
+// NOME E ENDEREÇO DO CLIENTE
+let nomeCliente = "";
+let enderecoCliente = "";
+ 
 // FUNÇÃO QUE VERIFICA E LIBERA O BOTÃO VERDE DE BAIXO
+let botaoVerde = document.querySelector(".barra-baixo-botao");
 function habilitarPedido() {
     pedidoFeito = pedidoFeitoPrato+pedidoFeitoBebida+pedidoFeitoSobremesa;
     if (pedidoFeito === 3) {
@@ -165,8 +166,10 @@ function selecionarPudim() {
 
 // APERTAR BOTÃO VERDE
 function fecharPedido() {
+    nomeCliente = prompt("Qual o seu nome?");
+    enderecoCliente = prompt("Qual seu endereço?");
     precoTotal = precoPrato + precoBebida + precoSobremesa;
-    mensagemZap = `Olá, gostaria de fazer o pedido:\n-Prato: ${nomePrato}\n-Bebida: ${nomeBebida}\n-Sobremesa: ${nomeSobremesa}\nTotal: R$ ${precoTotal.toFixed(2)}`;
+    mensagemZap = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${precoTotal.toFixed(2)}\n\nNome: ${nomeCliente}\nEndereço: ${enderecoCliente}`;
     if (pedidoFeito === 3) {
         window.open(`https://wa.me/5593991970827?text=${encodeURIComponent(mensagemZap)}`);
     }
