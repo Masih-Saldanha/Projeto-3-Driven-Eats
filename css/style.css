@@ -16,7 +16,7 @@ a {
 }
 /* BARRA FIXA DO TOPO */
 header {
-    width: 414px;
+    width: 100vw;
     height: 92px;
     position: fixed;
     background-color: #CF2B2B;
@@ -40,7 +40,7 @@ header h2 {
 }
 /* CORPO DO APP */
 main {
-    width: 414px;
+    width: 100vw;
     /* height: 1026px; */
     /* height: calc(100vh + 430px); */
     position: relative;
@@ -48,6 +48,8 @@ main {
     /* border: 1px solid black; */
 }
 .conteudo {
+    /* width: 414px; */
+    /* height: 1311px; */
     position: relative;
 }
 .menu {
@@ -59,7 +61,7 @@ main {
     padding-top: 123px;
 }
 .menu-3 {
-    padding-bottom: 16px;
+    padding-bottom: 92px;
 }
 .menu h1 {
     font-size: 26px;
@@ -217,9 +219,9 @@ ion-icon {
 }
 /* BARRA FIXA DE BAIXO */
 footer {
-    width: 414px;
+    width: 100vw;
     height: 92px;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     background-color: #FFFFFF;
     /* border: 1px solid black; */
@@ -227,6 +229,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* z-index: 1; */
 }
 .barra-baixo-botao {
     width: 364px;
@@ -244,6 +247,66 @@ footer {
     /* border: 1px solid black; */
     width: 200px;
 }
+.barra-baixo-botao-verde {
+    background-color: #CBCBCB;
+}
+.barra-baixo-botao-verde h2 {
+    font-weight: 400;
+}
+/* ABA DE CONFIRMAÇÃO DE PEDIDO */
+.fundo-apagado {
+    /* top: 10px; */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.confirmar-pedido-popup {
+    width: 377px;
+    height: auto;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px #00000040;
+    background-color: #50D074;
+    /* top: 50vh; */
+    position: relative;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    box-sizing: border-box;
+    padding: 21px 24px;
+}
+.confirmar-pedido-popup * {
+    text-align: center;
+}
+.confirmar-pedido-popup > div {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.botao-final {
+    width: auto;
+    border: 1px solid black;
+    display: flex;
+    /* text-align: center; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.botao-final h2 {
+    /* display: inline; */
+    /* text-align: center; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.confirmar-pedido-popup h2{
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
 
 /* 
 .barra-fixa-baixo-cinza {
@@ -255,13 +318,6 @@ footer {
     display: none;
 }
 */
-
-.barra-baixo-botao-verde {
-    background-color: #CBCBCB;
-}
-.barra-baixo-botao-verde h2 {
-    font-weight: 400;
-}
 
 /* REFERÊNCIAS FONT-FAMILY CSS */
 
