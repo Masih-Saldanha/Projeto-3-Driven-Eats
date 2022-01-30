@@ -25,31 +25,31 @@
                 <h2>Sua comida em 6 minutos</h2>
             </header>
             <!-- POP-UP DE CONFIRMAÇÃO -->
-            <!-- <div class="fundo-apagado escondido">
-                <div class="confirmar-pedido-popup">
-                    <h2>Confirme seu pedido</h2>
-                    <div>
-                        <h2>Teste</h2>
-                        <h2>Teste $</h2>
+            <div class="fundo-apagado escondido">
+                <div class="confirmar-pedido-popup escondido" data-identifier="confirmation-dialog">
+                    <h2 class="confirme-seu-pedido">Confirme seu pedido</h2>
+                    <div class="confere-opcao confere-opcao-prato">
+                        <h2 class="nome-prato">${nomePrato}</h2>
+                        <h2 class="prato-preco">R$ XX,XX</h2>
                     </div>
-                    <div>
-                        <h2>Teste</h2>
-                        <h2>Teste $</h2>
+                    <div class="confere-opcao confere-opcao-bebida">
+                        <h2 class="nome-bebida">${nomeBebida}</h2>
+                        <h2 class="bebida-preco">R$ XX,XX</h2>
                     </div>
-                    <div>
-                        <h2>Teste</h2>
-                        <h2>Teste $</h2>
+                    <div class="confere-opcao confere-opcao-sobremesa">
+                        <h2 class="nome-sobremesa">${nomeSobremesa}</h2>
+                        <h2 class="sobremesa-preco">R$ XX,XX</h2>
                     </div>
-                    <div>
+                    <div class="confere-opcao-total">
                         <h2>TOTAL</h2>
-                        <h2>Total $</h2>
+                        <h2 class="preco-total">R$ XX,XX</h2>
                     </div>
-                    <div class="botao-final">
+                    <div class="botao-final" onclick="fecharPedido()">
                         <h2>Tudo certo, pode pedir!</h2>
                     </div>
-                    <h2>Cancelar</h2>
+                    <h2 class="botao-cancelar" onclick="cancelarCompra()">Cancelar</h2>
                 </div>
-            </div> -->
+            </div>
             <!-- MENU 1 - PRATO PRINCIPAL -->
             <div class="menu menu-1" data-identifier="dishes">
                 <h1>Primeiro, seu prato</h1>
@@ -161,7 +161,7 @@
             </div>
             <!-- BARRA FIXA DE BAIXO -->
             <footer class="barra-fixa-baixo">
-                <div class="barra-baixo-botao barra-baixo-botao-verde" onclick="fecharPedido()">
+                <div class="barra-baixo-botao barra-baixo-botao-verde" onclick="conferirCompra()">
                     <h2>Selecione os 3 itens para fechar o pedido</h2>
                 </div>
             </footer>

@@ -1,4 +1,15 @@
 // VARIÁVEIS PARA MANIPULAÇÃO
+// VARIÁVEIS DE CLIQUES EM BOTÕES
+let janelaConferirPedido = document.querySelector(".fundo-apagado");
+let janelaConferirPedidoVerde = document.querySelector(".confirmar-pedido-popup")
+// VARIÁVEIS PARA INNERHTML DA JANELA DE CONFERIR COMPRAS
+let conferirPrato = document.querySelector(".nome-prato");
+let conferirBebida = document.querySelector(".nome-bebida");
+let conferirsobremesa = document.querySelector(".nome-sobremesa");
+let conferirPratoPreco = document.querySelector(".prato-preco");
+let conferirBebidaPreco = document.querySelector(".bebida-preco");
+let conferirSobremesaPreco = document.querySelector(".sobremesa-preco");
+let conferirPrecoTotal = document.querySelector(".preco-total")
 // VARIÁVEIS DE SELEÇÃO DE PRATO
 let escolherPizzaSinal = document.querySelector(".pizza-sinal-verde");
 let escolherPizzaBorda = document.querySelector(".menu-opcao-pizza");
@@ -24,12 +35,12 @@ let escolherPudimBorda = document.querySelector(".menu-opcao-pudim");
 let precoPrato = 0;
 let precoBebida = 0;
 let precoSobremesa = 0;
-let precoTotal = precoPrato+precoBebida+precoSobremesa;
+let precoTotal = precoPrato + precoBebida + precoSobremesa;
 // VARIÁVEIS DE CHECAGEM PARA HABILITAÇÃO DO BOTÃO VERDE
 let pedidoFeitoPrato = 0;
 let pedidoFeitoBebida = 0;
 let pedidoFeitoSobremesa = 0;
-let pedidoFeito = pedidoFeitoPrato+pedidoFeitoBebida+pedidoFeitoSobremesa;
+let pedidoFeito = pedidoFeitoPrato + pedidoFeitoBebida + pedidoFeitoSobremesa;
 // VARIÁVEIS DE NOMES DOS PEDIDOS
 let nomePrato = "";
 let nomeBebida = "";
@@ -38,11 +49,27 @@ let mensagemZap = "";
 // NOME E ENDEREÇO DO CLIENTE
 let nomeCliente = "";
 let enderecoCliente = "";
- 
+// FUNÇÃO DE ABRIR JANELA DE CONFERIR COMPRA
+function conferirCompra() {
+    janelaConferirPedido.classList.remove("escondido");
+    janelaConferirPedidoVerde.classList.remove("escondido");
+    conferirPrato.innerHTML = nomePrato;
+    conferirBebida.innerHTML = nomeBebida;
+    conferirsobremesa.innerHTML = nomeSobremesa;
+    conferirPratoPreco.innerHTML = `${precoPrato},00`;
+    conferirBebidaPreco.innerHTML = `${precoBebida},00`;
+    conferirSobremesaPreco.innerHTML = `${precoSobremesa},00`;
+    precoTotal = precoPrato + precoBebida + precoSobremesa;
+    conferirPrecoTotal.innerHTML = `R$ ${precoTotal},00`;
+}
+// FUNÇÃO DE CANCELAR A COMPRA
+function cancelarCompra() {
+    janelaConferirPedido.classList.add("escondido");
+}
 // FUNÇÃO QUE VERIFICA E LIBERA O BOTÃO VERDE DE BAIXO
 let botaoVerde = document.querySelector(".barra-baixo-botao");
 function habilitarPedido() {
-    pedidoFeito = pedidoFeitoPrato+pedidoFeitoBebida+pedidoFeitoSobremesa;
+    pedidoFeito = pedidoFeitoPrato + pedidoFeitoBebida + pedidoFeitoSobremesa;
     if (pedidoFeito === 3) {
         botaoVerde.classList.remove("barra-baixo-botao-verde");
         botaoVerde.innerHTML = "<h2>Fechar pedido</h2>"
